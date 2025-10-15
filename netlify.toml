@@ -1,6 +1,6 @@
 [build]
+  command = "npm install && npm run build && mkdir -p out && cp -r src/* out/"
   publish = "out"
-  command = "npm run build"
 
 [[redirects]]
   from = "/*"
