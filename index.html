@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💬 MaTrix Chat - Entrée directe</title>
+  <title>MaTrix Chat Room</title>
   <style>
     html, body {
       margin: 0;
@@ -15,9 +15,10 @@
     }
     header {
       background: linear-gradient(90deg, #d4af37, #b8860b);
-      padding: 10px;
-      text-align: center;
+      color: #000;
+      padding: 12px;
       font-weight: bold;
+      text-align: center;
     }
     iframe {
       width: 100%;
@@ -27,25 +28,12 @@
   </style>
 </head>
 <body>
-  <header>💬 Salon Matrix - Connexion directe</header>
-
+  <header>💬 MaTrix Chat</header>
+  <!-- Iframe du salon Hydrogen -->
   <iframe 
-    id="matrixFrame"
-    src=""
-    sandbox="allow-scripts allow-same-origin allow-forms"
-    referrerpolicy="no-referrer"
-    allow="camera; microphone; fullscreen">
+    src="https://hydrogen.element.io/#/room/!QPagFwYJzqIMGtdnFZ:matrix.org"
+    allow="camera; microphone; fullscreen"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals">
   </iframe>
-
-  <script>
-    // 🔹 Génération d'un ID invité temporaire (session aléatoire locale)
-    const randomId = Math.floor(Math.random() * 1000000);
-    const guestRoom = "!mLbUNjeXauxIHvGpKM:matrix.org"; // ton salon Matrix
-
-    // 🔹 Crée une URL Hydrogen avec un "guest session" simulé
-    const hydrogenUrl = `https://hydrogen.element.io/#/room/${guestRoom}?guest=${randomId}`;
-
-    document.getElementById("matrixFrame").src = hydrogenUrl;
-  </script>
 </body>
 </html>
